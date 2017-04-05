@@ -1,7 +1,7 @@
 {
   "name": "sass-bootstrap",
   "description": "Bootstrap. Simply converted to sass syntax.",
-  "version": "4.0.0-alpha.6",
+  "version": "4.0.0",
   "keywords": [
     "css",
     "sass",
@@ -43,10 +43,10 @@
   "main": "dist/js/bootstrap",
   "repository": {
     "type": "git",
-    "url": "https://github.com/twbs/bootstrap.git"
+    "url": "https://github.com/m8ms/sass-bootstrap"
   },
   "bugs": {
-    "url": "https://github.com/twbs/bootstrap/issues"
+    "url": "https://github.com/m8ms/sass-bootstrap/issues"
   },
   "license": "MIT",
   "dependencies": {
