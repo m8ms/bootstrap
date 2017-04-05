@@ -1,6 +1,6 @@
 {
-  "name": "bootstrap",
-  "description": "The most popular front-end framework for developing responsive, mobile first projects on the web.",
+  "name": "sass-bootstrap",
+  "description": "Bootstrap. Simply converted to sass syntax.",
   "version": "4.0.0-alpha.6",
   "keywords": [
     "css",
@@ -14,7 +14,8 @@
   "homepage": "https://getbootstrap.com",
   "author": "The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)",
   "contributors": [
-    "Twitter, Inc."
+    "Twitter, Inc.",
+    "Piotr Martyniak"
   ],
   "scripts": {
     "change-version": "node grunt/change-version.js",
@@ -34,7 +35,8 @@
     "uglify": "uglifyjs --compress warnings=false --mangle --comments '/^!/' --output dist/js/bootstrap.min.js dist/js/bootstrap.js",
     "uglify-docs": "uglifyjs --compress warnings=false --mangle --comments '/^!/' --output docs/assets/js/docs.min.js docs/assets/js/vendor/anchor.min.js docs/assets/js/vendor/clipboard.min.js docs/assets/js/vendor/holder.min.js docs/assets/js/src/application.js",
     "update-shrinkwrap": "npm shrinkwrap --dev && shx mv ./npm-shrinkwrap.json ./grunt/npm-shrinkwrap.json",
-    "test": "npm run eslint && grunt test"
+    "test": "npm run eslint && grunt test",
+    "convert2sass": "rimraf ./sass && node ./js/src/convert2sass.js"
   },
   "style": "dist/css/bootstrap.css",
   "sass": "scss/bootstrap.scss",
@@ -78,10 +80,13 @@
     "node-sass": "^4.5.0",
     "postcss-cli": "^3.0.0",
     "postcss-flexbugs-fixes": "^2.1.0",
+    "rimraf": "^2.6.1",
+    "sass-convert": "^0.5.2",
     "shelljs": "^0.7.7",
     "shx": "^0.2.2",
     "time-grunt": "^1.4.0",
-    "uglify-js": "^2.8.14"
+    "uglify-js": "^2.8.14",
+    "vinyl-fs": "^2.4.4"
   },
   "engines": {
     "node": ">=4"
